@@ -4,6 +4,7 @@ const logInputEls = formEl.getElementsByTagName("input");
 //* массив из двух инпутов
 const emailInp = logInputEls[0];
 const passInp = logInputEls[1];
+
 const onSubmitValidation = (event) => {
   event.preventDefault();
   console.log("Submitted");
