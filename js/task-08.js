@@ -4,9 +4,12 @@ const logInputEls = formEl.getElementsByTagName("input");
 //* массив из двух инпутов
 const emailInp = logInputEls[0];
 const passInp = logInputEls[1];
+
 const onSubmitValidation = (event) => {
   event.preventDefault();
-  console.log("Submitted");
+  console.dir(event.target);
+
+  // console.log("Submitted");
   const emailLength = emailInp.value.length;
   const passLength = passInp.value.length;
   if (emailLength === 0 || passLength === 0) {

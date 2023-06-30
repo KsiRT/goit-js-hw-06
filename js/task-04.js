@@ -4,12 +4,20 @@ const valueElement = document.querySelector("#value");
 
 let counterValue = 0;
 
-function increaseValue() {
-  counterValue += 1;
-  valueElement.textContent = counterValue;
-}
-function decreaseValue() {
-  counterValue -= 1;
+// function increaseValue() {
+//   counterValue += 1;
+//   valueElement.textContent = counterValue;
+// }
+// function decreaseValue() {
+//   counterValue -= 1;
+//   valueElement.textContent = counterValue;
+// }
+function changeValue({ target }) {
+  if (target.dataset.action === "decrement") {
+    counterValue -= 1;
+  } else {
+    counterValue += 1;
+  }
   valueElement.textContent = counterValue;
 }
 
