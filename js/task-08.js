@@ -2,13 +2,14 @@ const formEl = document.querySelector(".login-form");
 
 const logInputEls = formEl.getElementsByTagName("input");
 //* массив из двух инпутов
-const emailInp = logInputEls[0];
-const passInp = logInputEls[1];
+// const emailInp = logInputEls[0];
+// const passInp = logInputEls[1];
 
 const onSubmitValidation = (event) => {
   event.preventDefault();
   console.dir(event.target);
-
+  const emailInp = event.target.elements.email;
+  const passInp = event.target.elements.password;
   // console.log("Submitted");
   const emailLength = emailInp.value.length;
   const passLength = passInp.value.length;
@@ -26,7 +27,5 @@ const onSubmitValidation = (event) => {
 };
 
 formEl.addEventListener("submit", onSubmitValidation);
-
-// ? Вопрос по 4 пункту приема задания "Для доступу до елементів форми використовуй властивість elements" что имеется ввиду?
 
 // Електрички очень старался убирать :D
