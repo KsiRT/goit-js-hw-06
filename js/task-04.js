@@ -21,8 +21,8 @@ function changeValue({ target }) {
   valueElement.textContent = counterValue;
 }
 
-plusBtn.addEventListener("click", increaseValue);
-minusBtn.addEventListener("click", decreaseValue);
+plusBtn.addEventListener("click", changeValue);
+minusBtn.addEventListener("click", changeValue);
 
 // * Це я зробив спочатку:
 
