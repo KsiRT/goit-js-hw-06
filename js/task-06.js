@@ -5,11 +5,11 @@ const validatingInputEl = document.querySelector("#validation-input");
 // const { length } = requiredLengthData;
 // console.dir(length);
 validatingInputEl.addEventListener("blur", (evt) => {
-  const length = evt.target.dataset.length;
+  const lengthRequired = evt.target.dataset.length;
   const targetClass = evt.target.classList;
   const lengthOfInput = Number(evt.target.value.length);
 
-  if (lengthOfInput === Number(length)) {
+  if (lengthOfInput === Number(lengthRequired)) {
     targetClass.remove("invalid");
     targetClass.add("valid");
   } else {
